@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Voll.med</title>
+</head>
+
+<body>
+
+<header>
+
+    <nav class="cabecalho">
+
+
+       <!-- <div class="cabecalho__pesquisar">
+
+            <input type="search" placeholder="Pesquisar" id="pesquisar" class="pesquisar__input">
+            <button class="pesquisar__botao" data-botaoFiltro>
+                <button class="botao__apagar" data-botaoApagar>
+
+        </div>  -->
+
+        <div class="cabecalho__icones">
+
+        </div>
+    </nav>
+
+</header>
+
+    <form id="form_medico" class="form">
+
+        <div class="form_grupo">
+            <label for="nome" class="form_label">Nome</label>
+            <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
+        </div>
+
+        <div class="form_grupo">
+            <label for="email" class="form_label">Email</label>
+            <input type="email" name="email" class="form_input" id="email" placeholder="seuemail@email.com" required>
+        </div>
+        <div class="form_grupo">
+            <label for="telefone" class="form_label">Telefone</label>
+            <input type="tel" name="telefone" class="form_input" id="telefone" placeholder="(41)9.9784-8464" required>
+        </div>
+        <div class="form_grupo">
+            <label for="crm" class="form_label">CRM</label>
+            <input type="text" name="crm" class="form_input" id="crm" placeholder="123456" required>
+        </div>
+        <div class="form_grupo">
+            <label for="especialidade" class="form_label">Especialidade</label>
+            <input type="text" name="especialidade" class="form_input" id="especialidade" placeholder="Sua especialidade" required>
+        </div>
+        <div class="form_grupo">
+            <label for="cep" class="form_label">CEP</label>
+            <input type="text" name="cep" class="form_input" id="cep" placeholder="83.322-140" required>
+        </div>
+        <div class="form_grupo">
+            <label for="logradouro" class="form_label">Logradouro</label>
+            <input type="text" name="logradouro" class="form_input" id="logradouro" placeholder="Rua Rio Piraquara" required>
+        </div>
+        <div class="form_grupo">
+            <label for="bairro" class="form_label">Bairro</label>
+            <input type="text" name="bairro" class="form_input" id="bairro" placeholder="Weissópolis" required>
+        </div>
+        <div class="form_grupo">
+            <label for="cidade" class="form_label">Cidade</label>
+            <input type="text" name="cidade" class="form_input" id="cidade" placeholder="Pinhais" required>
+        </div>
+        <div class="form_grupo">
+            <label for="uf" class="form_label">UF</label>
+            <input type="text" name="uf" class="form_input" id="uf" placeholder="PR" required>
+        </div>
+        <div class="form_grupo">
+            <label for="numero" class="form_label">Número</label>
+            <input type="text" name="numero" class="form_input" id="numero" placeholder="1393">
+        </div>
+        <div class="form_grupo">
+            <label for="complemento" class="form_label">Complemento</label>
+            <input type="text" name="complemento" class="form_input" id="complemento" placeholder="Casa dos fundos">
+        </div>
+
+
+            <div class="submit">
+                <input type="hidden" name="acao" value="enviar">
+                <button type="submit" name="Submit" class="submit_btn" >Cadastrar</button>
+            </div>
+    </form>
+
+    <script src="../static/js/main.js" type="module"></script>
+</body>
+
+</html>
