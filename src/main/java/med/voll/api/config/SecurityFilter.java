@@ -29,6 +29,6 @@ public class SecurityFilter extends OncePerRequestFilter {
         if (authHeader == null){
             throw new RuntimeException("Token não enviado no cabeçalho");
         }
-        return authHeader;
+        return authHeader.replace("Bearer ", "");
     }
 }
