@@ -12,5 +12,6 @@ public record DadosConsulta(
         Long idPaciente,
         @NotNull
         @Future
-        LocalDateTime data) {
+        LocalDateTime data,
+        Especialidade especialidade) {
 }

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Table(name = "consultas")
-@Entity(name = "Consulta")
+@Entity(name = "Consultas")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,7 +18,7 @@ public class ConsultaJPA {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "medico_id")
