@@ -25,7 +25,7 @@ public class AgendaConsulta {
     @Autowired
     private List<ValidacaoAgendamento> validadores;
 
-    public void agendar(DadosConsulta dados){
+    public DadosDetahConsulta agendar(DadosConsulta dados){
         if (!pacienteRepository.existsById(dados.idPaciente())){
             throw new ValidacaoExcepion("Id do paciente não existe!");
         }
@@ -37,9 +37,14 @@ public class AgendaConsulta {
 
         var paciente = pacienteRepository.getReferenceById(dados.idPaciente());
         var medico = escolherMedico(dados);
+        if (medico == null){
+            throw new ValidacaoExcepion("Não há médico disponivel para esta data com esta especialidade");
+        }
         var consulta = new ConsultaJPA(null, medico, paciente, dados.data());
 
         consultaRepository.save(consulta);
+
+        return new DadosDetahConsulta(consulta);
     }
 
     private MedicoJPA escolherMedico(DadosConsulta dados) {
