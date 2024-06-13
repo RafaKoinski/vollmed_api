@@ -1,4 +1,4 @@
-package med.voll.api.model;
+package med.voll.api.model.consulta;
 
 import java.time.LocalDateTime;
 

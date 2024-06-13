@@ -1,4 +1,4 @@
-package med.voll.api.model;
+package med.voll.api.model.auth;
 
 public record DadosAutenticacao(String login, String senha) {
 }
